@@ -1,0 +1,20 @@
+:root {
+  text-align: center;
+  font-family:
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  color-scheme: dark;
+  color: #efefef;
+  background-color: #080808;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 60px;
+}

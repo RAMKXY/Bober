@@ -1,0 +1,19 @@
+nav {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  border-radius: 12px;
+  position: fixed;
+  padding: 15px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.link {
+  color: #efefef;
+  margin-left: 8px;
+}

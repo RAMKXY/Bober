@@ -1,0 +1,12 @@
+.progress {
+  border-radius: 12px;
+  background-color: green;
+  color: green;
+}
+.bar {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  border-radius: 12px;
+  background-color: #161616;
+}
