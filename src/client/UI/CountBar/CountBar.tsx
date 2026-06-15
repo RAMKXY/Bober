@@ -6,14 +6,17 @@ interface CountBarProps {
 }
 
 export default function CountBar({ count, maxCount }: CountBarProps) {
+  const percentageProgress = `${(count / maxCount) * 100}%`
+
   return (
-    <div className={styles.bar}>
-      <div
-        style={{ width: `${(count / maxCount) * 100}%` }}
-        className={styles.progress}
-      >
-        .
+    <>
+      {count} / {maxCount}
+      {/* TODO: Розмістити рахунок у правій частині відносно бару */}
+      <div className={styles.bar}>
+        <div style={{ width: percentageProgress }} className={styles.progress}>
+          .
+        </div>
       </div>
-    </div>
+    </>
   )
 }

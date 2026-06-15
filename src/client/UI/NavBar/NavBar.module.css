@@ -1,4 +1,4 @@
-nav {
+.nav {
   width: 80%;
   display: flex;
   margin: auto;
@@ -13,7 +13,8 @@ nav {
   transform: translateX(-50%);
   z-index: 1000;
 }
+
 .link {
-  color: #efefef;
   margin-left: 8px;
+  color: #efefef;
 }

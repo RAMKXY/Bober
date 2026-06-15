@@ -4,16 +4,16 @@ import styles from "./NavBar.module.css"
 export default function NavBar() {
   return (
     <>
-      <nav>
+      <nav className={styles.nav}>
         <Link className={styles.link} to={"/"}>
-          Домашня сторінка
+          Головна
         </Link>
 
-        <Link className={styles.link} to={"/error"}>
-          Друзя
+        <Link className={styles.link} to={"/friends"}>
+          Друзі
         </Link>
 
-        <Link className={styles.link} to={"/error"}>
+        <Link className={styles.link} to={"/settings"}>
           Налаштування
         </Link>
       </nav>

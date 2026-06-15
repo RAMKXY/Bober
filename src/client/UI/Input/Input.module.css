@@ -1,0 +1,20 @@
+.input {
+  border-radius: 6px;
+  background-color: rgb(10, 10, 10);
+  border: 2px solid rgb(20, 20, 20);
+  outline: none;
+  padding: 6px 16px;
+  text-align: left;
+  transition: ease-in-out 0.2s;
+}
+
+.input:focus {
+  background-color: rgb(18, 18, 18);
+  border: 2px solid rgb(28, 28, 28);
+}
+
+@media screen and (min-width: 1200px) {
+  .input {
+    font-size: 15px;
+  }
+}

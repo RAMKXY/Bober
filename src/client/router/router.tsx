@@ -1,14 +1,19 @@
-import Home from "../pages/Home/Home"
-import NotFound from "../pages/NotFound/NotFound"
+import Error from "../pages/Error/Error"
+import Auth from "../pages/Auth/Auth"
+import App from "../App"
 import { createBrowserRouter } from "react-router-dom"
 
 export default createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
   },
   {
-    path: "/error",
-    element: <NotFound />,
+    path: "/auth",
+    element: <Auth />,
+  },
+  {
+    path: "*",
+    element: <Error />,
   },
 ])
