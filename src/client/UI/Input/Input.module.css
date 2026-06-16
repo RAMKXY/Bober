@@ -17,4 +17,7 @@
   .input {
     font-size: 15px;
   }
+  .inputError {
+    font-size: 15px;
+  }
 }

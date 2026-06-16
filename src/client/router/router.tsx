@@ -1,12 +1,15 @@
-import Error from "../pages/Error/Error"
+import NotFound from "../pages/NotFound/NotFound"
 import Auth from "../pages/Auth/Auth"
-import App from "../App"
+import Home from "../pages/Home/Home"
+import { Navigate } from "react-router-dom"
 import { createBrowserRouter } from "react-router-dom"
+
+const isAuth = false // Тестова змінна
 
 export default createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: isAuth ? <Home /> : <Navigate to="/auth" replace />,
   },
   {
     path: "/auth",
@@ -14,6 +17,6 @@ export default createBrowserRouter([
   },
   {
     path: "*",
-    element: <Error />,
+    element: <NotFound />,
   },
 ])

@@ -2,7 +2,7 @@ import NavBar from "../../UI/NavBar/NavBar"
 import CountButton from "../../UI/CountButton/CountButton"
 import CountBar from "../../UI/CountBar/CountBar"
 import { useState } from "react"
-import styles from "../../App.module.css"
+import "../../App.css"
 
 export default function Home() {
   const [count, setCount] = useState(0)
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <h1 className={styles.h1}>$ {count}</h1>
+      <h1>$ {count}</h1>
       <CountBar count={count} maxCount={1000} />
       <CountButton onClick={onHandleClick}>Тапай</CountButton>
       <NavBar />
