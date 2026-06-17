@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home"
 import { Navigate } from "react-router-dom"
 import { createBrowserRouter } from "react-router-dom"
 
-const isAuth = false // Тестова змінна
+const isAuth = true // Тестова змінна
 
 export default createBrowserRouter([
   {

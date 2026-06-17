@@ -11,7 +11,6 @@ export default function CountBar({ count, maxCount }: CountBarProps) {
   return (
     <>
       {count} / {maxCount}
-      {/* TODO: Розмістити рахунок у правій частині відносно бару */}
       <div className={styles.bar}>
         <div style={{ width: percentageProgress }} className={styles.progress}>
           .

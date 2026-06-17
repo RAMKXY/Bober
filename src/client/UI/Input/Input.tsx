@@ -6,11 +6,7 @@ interface InputProps {
   type?: "text" | "password"
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
-export default function Input({
-  children,
-  onChange,
-  type = "text",
-}: InputProps) {
+export default function Input({children, onChange, type="text"}: InputProps) {
   return (
     <input
       onChange={onChange}

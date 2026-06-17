@@ -1,16 +1,16 @@
 import Button from "../../UI/Button/Button"
 import Input from "../../UI/Input/Input"
 import Error from "../../UI/Error/Error"
-import { Link } from "react-router-dom"
+import {  Link } from "react-router-dom"
 import { ChangeEvent, useState} from "react"
 import styles from "./Auth.module.css"
 import "../../App.css"
 
-// TODO: Відредагувати код
 export default function Auth() {
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
+  const [response, setResponse] = useState("")
 
   function handleChangeName(e: ChangeEvent<HTMLInputElement>) {
     setName(e.target?.value)
@@ -18,6 +18,19 @@ export default function Auth() {
 
   function handleChangePassword(e: ChangeEvent<HTMLInputElement>) {
     setPassword(e.target?.value)
+  }
+
+  async function postData() {
+    const responseJSON = await fetch("/api/auth", {
+      method: "POST",
+      headers: {
+        name: encodeURI(name),
+        password: encodeURI(password),
+      }
+    })
+    
+    const data = await responseJSON.json()
+    return setResponse(data)
   }
 
   function checkUserData() {
@@ -43,7 +56,8 @@ export default function Auth() {
     }
     // ! ГОВНОКОД !
   
-    return setError("")
+    setError("")
+    return postData()
   }
 
   return (
@@ -68,6 +82,7 @@ export default function Auth() {
         <Button onClick={checkUserData}>Зареєструватися</Button>
 
         {error.length !== 0 && <Error>{error}</Error>}
+        {response}
       </div>
       
     </>
