@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cors": "^2.8.6",
+    "crypto": "^1.0.1",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mysql2": "^3.22.4",
@@ -17,7 +18,8 @@
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.16.0",
     "tsx": "^4.22.3",
-    "use-immer": "^0.11.0"
+    "use-immer": "^0.11.0",
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
